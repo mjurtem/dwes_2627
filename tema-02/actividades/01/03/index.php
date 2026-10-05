@@ -10,7 +10,7 @@
         $cadena1 = "Hola";
         $cadena2 = "Mundo";
         $cadena3 = $cadena1. " ". $cadena2;
-        print "<h1>$cadena3</h1>";
+        include 'view.index.php';
     ?>
 </body>
 </html>
