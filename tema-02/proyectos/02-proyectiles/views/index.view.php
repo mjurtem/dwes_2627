@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Proyecto 2.1 - Calculadora Básica</title>
+    <title>Proyecto 2.2 - Calculo Lanzamiento Proyectiles</title>
 
     <!-- css bootstrap 5.3.8 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -16,8 +16,8 @@
     <div class="container mt-3">
         <!-- cabecera  de la aplicacion -->
         <header class="bg-primary text-white p-3 mb-3">
-            <i class="bi bi-calculator-fill"></i>
-            <span class="fs-6">Proyecto 2.1 - Calculadora Básica</span>
+            <i class="bi bi-rocket-takeoff"></i>
+            <span class="fs-6">Proyecto 2.2 - Cálculo Lanzamiento de Proyectiles</span>
         </header>
 
          <!-- contenido principal de la aplicacion -->
@@ -25,26 +25,22 @@
             <div class="content">
                 <!-- Formulario de la calculadora -->
                 <form method="post">
-                    <!-- Campo valor 1 -->
+                    <!-- Campo velocidad inicial -->
                     <div class="mb-3">
-                        <label for="valor1" class="form-label">Valor 1:</label>
-                        <input type="number" class="form-control" step="0.01" placeholder="0.00" id="valor1" name="valor1" required>
+                        <label for="velocidad_inicial" class="form-label">Velocidad Inicial</label>
+                        <input type="number" class="form-control" step="0.01" placeholder="0.00" id="velocidad_inicial" name="velocidad_inicial" required> <small class="text-muted">Velocidad en m/s</small>
                     </div>
 
-                    <!-- Campo valor 2 -->
+                    <!-- Ángulo de lanzamiento -->
                     <div class="mb-3">
-                        <label for="valor2" class="form-label">Valor 2:</label>
-                        <input type="number" class="form-control" step="0.01" placeholder="0.00" id="valor2" name="valor2" required>
+                        <label for="angulo_lanzamiento" class="form-label">Ángulo de Lanzamiento</label>
+                        <input type="number" class="form-control" step="0.01" placeholder="0.00" id="angulo_lanzamiento" name="angulo_lanzamiento" required> <small class="text-muted">Ángulo en grados</small>
                     </div>
 
                     <!-- Botones de accion -->
                     <div class="btn-group" role="group">
                         <button type="reset" class="btn btn-danger">Borrar</button>
-                        <button type="submit" class="btn btn-warning" name="operacion" value="sumar" formaction="sumar.php">Sumar</button>
-                        <button type="submit" class="btn btn-warning" name="operacion" value="restar" formaction="restar.php">Restar</button>
-                        <button type="submit" class="btn btn-warning" name="operacion" value="multiplicar" formaction="multiplicar.php">Multiplicar</button>
-                        <button type="submit" class="btn btn-warning" name="operacion" value="dividir" formaction="dividir.php">Dividir</button>
-                        <button type="submit" class="btn btn-warning" name="operacion" value="potencia" formaction="potencia.php">Potencia</button>
+                        <button type="submit" class="btn btn-warning" name="operacion" value="calcular" formaction="calcular.php">Cálculos del Lanzamiento</button>
                     </div>
                 </form>
             </div>

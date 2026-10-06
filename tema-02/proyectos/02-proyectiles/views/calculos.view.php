@@ -23,30 +23,40 @@
          <!-- contenido principal de la aplicacion -->
          <main>
             <div class="content">
-                <!-- Formulario de la calculadora -->
-                <form method="post">
-                    <!-- Campo valor 1 -->
-                    <div class="mb-3">
-                        <label for="valor1" class="form-label">Valor 1:</label>
-                        <input type="number" class="form-control" step="0.01" placeholder="0.00" id="valor1" name="valor1" required>
-                    </div>
-
-                    <!-- Campo valor 2 -->
-                    <div class="mb-3">
-                        <label for="valor2" class="form-label">Valor 2:</label>
-                        <input type="number" class="form-control" step="0.01" placeholder="0.00" id="valor2" name="valor2" required>
-                    </div>
-
-                    <!-- Botones de accion -->
+                <!-- Tabla de resultados -->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Valores iniciales:</th>
+                            <th>Resultados:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Velocidad Inicial:</td>
+                            <td><?= $velocidad_inicial ?></td>
+                        </tr>
+                        <tr>
+                            <td>Ángulo inclinación</td>
+                            <td><?= $velocidad_inicial_vertical ?></td>
+                        </tr>
+                        <tr>
+                            <td>Altura Máxima</td>
+                            <td><?= $altura_maxima ?></td>
+                        </tr>
+                        <tr>
+                            <td>Alcance Máximo</td>
+                            <td><?= $alcance_maximo ?></td>
+                        </tr>
+                        <tr>
+                            <td>Tiempo de Vuelo</td>
+                            <td><?= $tiempo_vuelo ?></td>
+                        </tr>
+                    </tbody>
                     <div class="btn-group" role="group">
-                        <button type="reset" class="btn btn-danger">Borrar</button>
-                        <button type="submit" class="btn btn-warning" name="operacion" value="sumar" formaction="sumar.php">Sumar</button>
-                        <button type="submit" class="btn btn-warning" name="operacion" value="restar" formaction="restar.php">Restar</button>
-                        <button type="submit" class="btn btn-warning" name="operacion" value="multiplicar" formaction="multiplicar.php">Multiplicar</button>
-                        <button type="submit" class="btn btn-warning" name="operacion" value="dividir" formaction="dividir.php">Dividir</button>
-                        <button type="submit" class="btn btn-warning" name="operacion" value="potencia" formaction="potencia.php">Potencia</button>
+                        <a class="btn btn-primary" href="index.php" role="button">Volver</a>
                     </div>
-                </form>
+                </table>
             </div>
 
          </main>
