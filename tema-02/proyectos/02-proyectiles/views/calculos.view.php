@@ -16,8 +16,8 @@
     <div class="container mt-3">
         <!-- cabecera  de la aplicacion -->
         <header class="bg-primary text-white p-3 mb-3">
-            <i class="bi bi-calculator-fill"></i>
-            <span class="fs-6">Proyecto 2.1 - Calculadora Básica</span>
+            <i class="bi bi-rocket-takeoff"></i>
+            <span class="fs-6">Proyecto 2.2 - Cálculo Lanzamiento de Proyectiles</span>
         </header>
 
          <!-- contenido principal de la aplicacion -->
@@ -25,38 +25,50 @@
             <div class="content">
                 <!-- Tabla de resultados -->
                 <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Valores iniciales:</th>
-                            <th>Resultados:</th>
-                        </tr>
-                    </thead>
                     <tbody>
                         <tr>
+                            <th colspan="2">Valores iniciales:</th>
+                        </tr>
+                        <tr>
                             <td>Velocidad Inicial:</td>
-                            <td><?= $velocidad_inicial ?></td>
+                            <td><?= number_format($velocidad_inicial, 2, ",", ".") ?> m/s</td>
                         </tr>
                         <tr>
-                            <td>Ángulo inclinación</td>
-                            <td><?= $velocidad_inicial_vertical ?></td>
+                            <td>Ángulo inclinación:</td>
+                            <td><?= number_format($angulo_lanzamiento, 2, ",", ".") ?> °</td>
                         </tr>
                         <tr>
-                            <td>Altura Máxima</td>
-                            <td><?= $altura_maxima ?></td>
+                            <th colspan="2">Resultados:</th>
                         </tr>
                         <tr>
-                            <td>Alcance Máximo</td>
-                            <td><?= $alcance_maximo ?></td>
+                            <td>Ángulo Radianes:</td>
+                            <td><?= number_format($angulo_radianes, 6, ",", ".") ?> Radianes</td>
                         </tr>
                         <tr>
-                            <td>Tiempo de Vuelo</td>
-                            <td><?= $tiempo_vuelo ?></td>
+                            <td>Velocidad Inicial X:</td>
+                            <td><?= number_format($velocidad_inicial_x, 2, ",", ".") ?> m/s</td>
+                        </tr>
+                        <tr>
+                            <td>Velocidad Inicial Y:</td>
+                            <td><?= number_format($velocidad_inicial_y, 2, ",", ".") ?> m/s</td>
+                        </tr>
+                        <tr>
+                            <td>Alcance Máximo del Proyectil:</td>
+                            <td><?= number_format($alcance_maximo, 2, ",", ".") ?> m</td>
+                        </tr>
+                        <tr>
+                            <td>Tiempo de Vuelo del Proyectil:</td>
+                            <td><?= number_format($tiempo_vuelo, 2, ",", ".") ?> s</td>
+                        </tr>
+                        <tr>
+                            <td>Altura Máxima del Proyectil:</td>
+                            <td><?= number_format($altura_maxima, 2, ",", ".") ?> m</td>
                         </tr>
                     </tbody>
-                    <div class="btn-group" role="group">
-                        <a class="btn btn-primary" href="index.php" role="button">Volver</a>
-                    </div>
                 </table>
+                <div class="btn-group" role="group">
+                    <a class="btn btn-primary" href="index.php" role="button">Volver</a>
+                </div>
             </div>
 
          </main>

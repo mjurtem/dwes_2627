@@ -20,23 +20,25 @@ define("G", 9.81); // gravedad en m/s^2
 // Negociado
 // Recoger los valores del formulario
 $velocidad_inicial = (float) $_POST['velocidad_inicial'] ?? 0;
+
 $angulo_lanzamiento = (float) $_POST['angulo_lanzamiento'] ?? 0;
 
 // Convertimos el ángulo de grados a radianes
 $angulo_radianes = deg2rad($angulo_lanzamiento);
 
 // Calculamos la velocidad  inicial horizontal y verical
-$velocidad_inicial_horizontal = $velocidad_inicial * cos($angulo_radianes);
-$velocidad_inicial_vertical = $velocidad_inicial * sin($angulo_radianes);
+$velocidad_inicial_x = $velocidad_inicial * cos($angulo_radianes);
 
-// Calculamos la altura máxima
-$altura_maxima = ($velocidad_inicial_vertical ** 2) / (2 * G);
+$velocidad_inicial_y = $velocidad_inicial * sin($angulo_radianes);
 
 // Calculamos el alcance máximo
-$alcance_maximo = ($velocidad_inicial_horizontal * (2 * $velocidad_inicial_vertical)) / G;
+$alcance_maximo = (pow($velocidad_inicial, 2) * sin(2 * $angulo_radianes)) / G;
 
 // Tiempo total de vuelo
-$tiempo_vuelo = (2 * $velocidad_inicial_vertical) / G;
+$tiempo_vuelo = (2 * $velocidad_inicial_y) / G;
+
+// Calculamos la altura máxima
+$altura_maxima = ($velocidad_inicial_y ** 2) / (2 * G);
 
 // Vista
 include 'views/calculos.view.php';

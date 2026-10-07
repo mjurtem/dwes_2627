@@ -27,5 +27,77 @@
         echo "El caso 4 es de tipo: " . gettype($resultado4) . " y su valor es: $resultado4<br>";
         echo "El caso 5 es de tipo: " . gettype($resultado5) . " y su valor es: $resultado5<br>";
     ?>
+    <hr>
+    <h1>Ejercicio 2</h1>
+    <?php
+        // Ejercicio 2. is_null().
+        $var6;
+        $var7 = "Hola";
+        echo "<p>Casos que devuelven true:</p>";
+        var_dump(is_null($var));
+        var_dump(is_null($var6));
+        unset($var7);
+        var_dump(is_null($var7));
+
+        $var8 = "";
+        $var9 = 0;
+        $var10 = false;
+        echo "<p>Casos que devuelven false:</p>";
+        var_dump(is_null($var8));
+        echo "<br>";
+        var_dump(is_null($var9));
+        echo "<br>";
+        var_dump(is_null($var10));
+    ?>
+
+    <hr>
+    <h1>Ejercicio 3</h1>
+    <?php
+        // Ejercicio 3. isset().
+        $var11 = "";
+        $var12 = 0;
+        $var13 = false;
+        echo "<p>Casos que devuelven true:</p>";
+        var_dump(isset($var11));
+        echo "<br>";
+        var_dump(isset($var12));
+        echo "<br>";
+        var_dump(isset($var13));
+
+        $var14;
+        $var15 = null;
+        echo "<p>Casos que devuelven false:</p>";
+        var_dump(isset($var14));
+        echo "<br>";
+        var_dump(isset($var15));
+        echo "<br>";
+        var_dump(isset($var));
+    ?>
+
+    <hr>
+    <h1>Ejercicio 4</h1>
+    <?php
+        // Ejercicio 4. empty().
+        
+        $var16 = "";
+        $var17 = 0;
+        $var18 = false;
+        echo "<p>Casos que devuelven true:</p>";
+        var_dump(empty($var16));
+        echo "<br>";
+        var_dump(empty($var17));
+        echo "<br>";
+        var_dump(empty($var18));
+
+        $var19 = "Hola";
+        $var20 = 1;
+        $var21 = true;
+        echo "<p>Casos que devuelven false:</p>";
+        var_dump(empty($var19));
+        echo "<br>";
+        var_dump(empty($var20));
+        echo "<br>";
+        var_dump(empty($var21));
+    ?>
 </body>
 </html>
