@@ -9,7 +9,7 @@ $tiempo = (float) $_POST['tiempo'];
 $masa = (float) $_POST['masa'];
 
 $velocidad_final = $velocidad_inicial + $aceleracion * $tiempo;
-$espacio_recorrido = (pow($velocidad_final, 2) - pow($velocidad_inicial, 2)) / (2 * $aceleracion);
+$espacio_recorrido = $velocidad_inicial * $tiempo + 0.5 * $aceleracion * pow($tiempo, 2);
 $fuerza_neta = $masa * $aceleracion;
 $energia_cinetica_final = 0.5 * $masa * pow($velocidad_final, 2);
 
