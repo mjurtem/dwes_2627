@@ -59,9 +59,9 @@ function get_libros()
     return $libros;
 }
 
-// Funcion obtener 
+// Funcion obtener ultimo id del array
 
-function obtener_id_nuevo_libro($libros)
+function obtener_id_nuevo_libro($libros = [])
 {
     // Obtener el último libro del array
     $ultimo_libro = end($libros);

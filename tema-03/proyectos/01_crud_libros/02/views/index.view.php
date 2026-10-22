@@ -88,8 +88,8 @@
                                 <th scope="row" class="text-end"><?= $libro['id'] ?></th>
                                 <td ><?= $libro['titulo'] ?></td>
                                 <td><?= $libro['autor'] ?></td>
-                                <td><?= implode(',', $libro['generos'])  ?></td>
                                 <td><?= $libro['editorial'] ?></td>
+                                <td><?= implode(',', $libro['generos'])  ?></td>
                                 <td class="text-end"><?= number_format($libro['precio'], 2, ',', '.') ?> €</td>
                             </tr>
                         <?php endforeach ?>

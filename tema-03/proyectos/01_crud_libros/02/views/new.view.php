@@ -42,7 +42,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Géneros:</label>
-                        <input type="text" class="form-control" id="genero" name="genero" required>
+                        <input type="text" class="form-control" id="generos" name="generos" required>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Precio:</label>
@@ -52,9 +52,7 @@
                     <button type="reset" class="btn-solid theme-warning">Borrar</button>
                     <button type="submit" class="btn-solid theme-primary">Crear Libro</button>
                 </form>
-
             </div>
-
          </main>
 
         <!-- pie de pagina de la aplicacion -->
