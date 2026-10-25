@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 6.0</title>
+    <title>Proyecto 3.2 Proyecto CRUD Tabla Artículos</title>
 
     <!-- css bootstrap 6.0 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
@@ -18,7 +18,7 @@
         <!-- cabecera  de la aplicacion -->
         <header class="bg-primary text-white p-3 mb-3">
             <i class="bi bi-stack"></i>
-            <span class="fs-6">Titulo de la aplicacion</span>
+            <span class="fs-6">Proyecto 3.2 Proyecto CRUD Tabla Artículos</span>
         </header>
 
         <nav class="navbar md:navbar-expand bg-1">
@@ -39,20 +39,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="new.php">Nuevo</a>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
-                        Menu
-                        </button>
-                        <div class="menu">
-                        <a class="menu-item" href="#">Action</a>
-                        <a class="menu-item" href="#">Another action</a>
-                        <hr class="menu-divider">
-                        <a class="menu-item" href="#">Something else here</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
                     </li>
                     </ul>
                     <form class="hstack gap-2" role="search">
@@ -77,18 +63,21 @@
                         <th>Categoria</th>
                         <th>Unidades</th>
                         <th>Precio</th>
+                        <th>Acciones</th>
                     </tr>
                     <?php foreach ($articulos as  $indice => $articulo): ?>
-                        <th><?= $articulo['id'] ?></th>
-                        <td><?= $articulo['descripcion'] ?></td>
-                        <td><?= $articulo['modelo'] ?></td>
-                        <td><?= $articulo['categoria'] ?></td>
-                        <td><?= $articulo['unidades'] ?></td>
-                        <td><?= $articulo['precio'] ?></td>
-                        <td>
-                            <a href="" class="bi bi-trash"></a>
-                            <a href="edit.php?indice<?= $indice ?>" class="bi bi-pencil"></a>
-                        </td>
+                        <tr>
+                            <th><?= $articulo['id'] ?></th>
+                            <td><?= $articulo['descripcion'] ?></td>
+                            <td><?= $articulo['modelo'] ?></td>
+                            <td><?= $articulo['categoria'] ?></td>
+                            <td><?= $articulo['unidades'] ?></td>
+                            <td><?= number_format($articulo['precio'], 2,',' ,'.') ?></td>
+                            <td>
+                                <a href="index.php" class="bi bi-trash"></a>
+                                <a href="edit.php?indice=<?= $indice ?>" class="bi bi-pencil"></a>
+                            </td>
+                        </tr>
                     <?php endforeach ?>
                 </table>
             </div>
