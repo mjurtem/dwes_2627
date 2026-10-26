@@ -29,7 +29,7 @@
                 <legend>Formulario Editar Libro</legend>
 
                 <!-- formulario nuevo libro -->
-                <form action="update.php" method="post">
+                <form action="update.php?indice=<?= $indice ?>" method="post">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Titulo:</label>
                         <input type="text" class="form-control" id="titulo" name="titulo" value="<?= $libro['titulo'] ?>" required>
@@ -52,7 +52,7 @@
                     </div>
                     <a class="btn-solid theme-danger" href="index.php">Cancelar</a>
                     <button type="reset" class="btn-solid theme-warning">Borrar</button>
-                    <button type="submit" class="btn-solid theme-primary">Crear Libro</button>
+                    <button type="submit" class="btn-solid theme-primary">Actualizar Libro</button>
                 </form>
             </div>
          </main>
