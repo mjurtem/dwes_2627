@@ -5,10 +5,23 @@ $indice = htmlspecialchars($_GET['indice'] ?? null);
 
 $articulos = get_articulos();
 
-$descripcion = htmlspecialchars($_POST['descripcion']);
-$modelo = htmlspecialchars($_POST['modelo']);
-$categoria = htmlspecialchars($_POST['categoria']);
-$unidades = htmlspecialchars($_POST['unidades']);
+$descripcion = htmlspecialchars($_POST['descripcion'] ?? null);
+$modelo = htmlspecialchars($_POST['modelo'] ?? null);
+$categoria = htmlspecialchars($_POST['categoria'] ?? null);
+$unidades = htmlspecialchars($_POST['unidades'] ?? null);
+$precio = htmlspecialchars($_POST['precio'] ?? null);
 
-require_once 'views/edit.view.php';
+$articulo_editado =
+[
+    'id' => $articulos[$indice]['id'],
+    'descripcion' => $descripcion,
+    'modelo' => $modelo,
+    'categoria' => explode(', ' ,$categoria),
+    'unidades' => $unidades,
+    'precio' => $precio
+];
+
+$articulos[$indice] = $articulo_editado;
+
+require_once 'views/index.view.php';
 ?>

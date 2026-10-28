@@ -70,12 +70,13 @@
                             <th><?= $articulo['id'] ?></th>
                             <td><?= $articulo['descripcion'] ?></td>
                             <td><?= $articulo['modelo'] ?></td>
-                            <td><?= $articulo['categoria'] ?></td>
+                            <td><?= implode(',', $articulo['categoria']) ?></td>
                             <td><?= $articulo['unidades'] ?></td>
                             <td><?= number_format($articulo['precio'], 2,',' ,'.') ?></td>
                             <td>
-                                <a href="index.php" class="bi bi-trash"></a>
+                                <a href="delete.php?indice=<?= $indice ?>" class="bi bi-trash"></a>
                                 <a href="edit.php?indice=<?= $indice ?>" class="bi bi-pencil"></a>
+                                <a href="show.php?indice=<?= $indice ?>" class="bi bi-eye"></a>
                             </td>
                         </tr>
                     <?php endforeach ?>

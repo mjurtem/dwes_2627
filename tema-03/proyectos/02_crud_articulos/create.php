@@ -16,7 +16,7 @@ $nuevo_articulo =
     'id' => $id,
     'descripcion' => $descripcion,
     'modelo' => $modelo,
-    'categoria' => $categoria,
+    'categoria' => explode(', ', $categoria),
     'unidades' => $unidades,
     'precio' => $precio
 ];

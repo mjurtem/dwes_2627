@@ -24,8 +24,8 @@
         <!-- contenido principal de la aplicacion -->
          <main>
             <div class="content">
-               <legend>Nuevo Producto</legend>
-                <form action="update.php" method="post">
+               <legend>Editar Producto</legend>
+                <form action="update.php?indice=<?= $indice ?>" method="post">
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Descripción:</label>
                         <input type="text" class="form-control" id="descripcion" name="descripcion" value="<?= $articulo['descripcion'] ?>" required>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Categoria:</label>
-                        <input type="text" class="form-control" id="categoria" name="categoria" value="<?= $articulo['categoria'] ?>" required>
+                        <input type="text" class="form-control" id="categoria" name="categoria" value="<?= implode(', ', $articulo['categoria']) ?>" required>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Unidades:</label>
