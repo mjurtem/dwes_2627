@@ -3,7 +3,7 @@ require_once 'libs/funciones_articulos.php';
 
 $descripcion = htmlspecialchars($_POST['descripcion'] ?? '');
 $modelo = htmlspecialchars($_POST['modelo'] ?? '');
-$categoria = htmlspecialchars($_POST['categoria'] ?? '');
+$categoria = htmlspecialchars($_POST['categorias'] ?? '');
 $unidades = htmlspecialchars($_POST['unidades'] ?? '');
 $precio = htmlspecialchars($_POST['precio'] ?? '');
 
@@ -16,7 +16,7 @@ $nuevo_articulo =
     'id' => $id,
     'descripcion' => $descripcion,
     'modelo' => $modelo,
-    'categoria' => explode(', ', $categoria),
+    'categorias' => explode(', ', $categoria),
     'unidades' => $unidades,
     'precio' => $precio
 ];

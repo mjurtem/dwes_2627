@@ -34,18 +34,31 @@
                 </div>
                 <div class="drawer-body mb-2 md:mb-0">
                     <ul class="nav navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">Listado</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="new.php">Nuevo</a>
-                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.php">Listado</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="new.php">Nuevo</a>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
+                                Ordenar
+                            </button>
+                            <div class="menu">
+                                <a class="menu-item" href="order.php?criterio=id">Id</a>
+                                <a class="menu-item" href="order.php?criterio=descripcion">Descripción</a>
+                                <a class="menu-item" href="order.php?criterio=modelo">Modelo</a>
+                                <a class="menu-item" href="order.php?criterio=categorias">Categorias</a>
+                                <a class="menu-item" href="order.php?criterio=unidades">Unidades</a>
+                                <a class="menu-item" href="order.php?criterio=precio">Precio</a>
+                            </div>
+                        </li>
                     </ul>
-                    <form class="hstack gap-2" role="search">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search"/>
-                    <button class="btn-solid btn-icon theme-secondary" type="submit">
-                        <svg class="bi" width="16" height="16"><use href="#search" /></svg>
-                    </button>
+                    <form class="hstack gap-2" role="search" action="filter.php" method="get">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="prompt"/>
+                        <button class="btn-solid btn-icon theme-secondary" type="submit">
+                            <svg class="bi" width="16" height="16"><use href="#search" /></svg>
+                        </button>
                     </form>
                 </div>
                 </dialog>
@@ -70,7 +83,7 @@
                             <th><?= $articulo['id'] ?></th>
                             <td><?= $articulo['descripcion'] ?></td>
                             <td><?= $articulo['modelo'] ?></td>
-                            <td><?= implode(',', $articulo['categoria']) ?></td>
+                            <td><?= implode(',', $articulo['categorias']) ?></td>
                             <td><?= $articulo['unidades'] ?></td>
                             <td><?= number_format($articulo['precio'], 2,',' ,'.') ?></td>
                             <td>

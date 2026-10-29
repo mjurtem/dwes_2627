@@ -36,7 +36,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Categoria:</label>
-                        <input type="text" class="form-control" id="categoria" name="categoria" value="<?= implode(', ', $articulo['categoria']) ?>" disabled>
+                        <input type="text" class="form-control" id="categoria" name="categoria" value="<?= implode(', ', $articulo['categorias']) ?>" disabled>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Unidades:</label>

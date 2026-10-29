@@ -16,7 +16,7 @@ $articulo_editado =
     'id' => $articulos[$indice]['id'],
     'descripcion' => $descripcion,
     'modelo' => $modelo,
-    'categoria' => explode(', ' ,$categoria),
+    'categorias' => explode(', ' ,$categoria),
     'unidades' => $unidades,
     'precio' => $precio
 ];
