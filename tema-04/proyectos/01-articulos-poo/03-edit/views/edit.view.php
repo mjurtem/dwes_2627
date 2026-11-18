@@ -38,7 +38,7 @@
                     <!-- Modelo -->
                     <div class="mb-3">
                         <label for="modelo" class="form-label">Modelo:</label>
-                        <input type="text" class="form-control" id="modelo" name="modelo" required>
+                        <input type="text" class="form-control" id="modelo" name="modelo" value="<?= $articulo->getModelo() ?>" required>
                     </div>
                     <!-- Marca -->
                     <!-- Genera dinámicamente el select de marcas a partir del array $marcas -->
@@ -64,12 +64,12 @@
                     <!-- unidades -->
                     <div class="mb-3">
                         <label for="unidades" class="form-label">Unidades:</label>
-                        <input type="number" min="0" step="1" class="form-control" id="unidades" name="unidades" required>
+                        <input type="number" min="0" step="1" class="form-control" id="unidades" name="unidades" value="<?= $articulo->getUnidades() ?>" required>
                     </div>
                     <!-- precio -->
                     <div class="mb-3">
                         <label for="precio" class="form-label">Precio:</label>
-                        <input type="number" min="0" step="0.01" class="form-control" id="precio" name="precio" required>
+                        <input type="number" min="0" step="0.01" class="form-control" id="precio" name="precio" value="<?= $articulo->getPrecio() ?>" required>
                     </div>
                     <!-- Categorías -->
                     <!-- Genera dinámicamente una lista checbox de categorías a partir del array $categorias -->

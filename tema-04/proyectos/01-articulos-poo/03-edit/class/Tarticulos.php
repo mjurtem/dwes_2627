@@ -212,4 +212,21 @@ class Tarticulos
         }
         return null;
     }
+
+     public function getIndiceById(int $id): ?int
+    {
+        foreach ($this->tarticulos as $indice => $articulo) 
+        {
+            if ($articulo->getId() === $id) 
+            {
+                return $indice;
+            }
+        }
+        return null;
+    }
+
+     public function update(int $indice, Articulo $articulo_actualizado): void
+    {
+        $this->tarticulos[$indice] = $articulo_actualizado;
+    }
 }
