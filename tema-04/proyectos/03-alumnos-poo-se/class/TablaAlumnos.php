@@ -32,13 +32,13 @@ class TablaAlumnos
 
     public function addAlumnos(): void
     {
-        $this->create(new Alumno(1,"Lucía","García López","lucia.garcia@example.com","2005-04-12",0,[1, 2]));
+        $this->create(new Alumno(1,"Lucía","García López","lucia.garcia@example.com","04/12/2005",0,[1, 2]));
 
-        $this->create(new Alumno(2,"Marcos","Fernández Ruiz","marcos.fernandez@example.com","2004-09-23",1,[2, 5]));
+        $this->create(new Alumno(2,"Marcos","Fernández Ruiz","marcos.fernandez@example.com","09/23/2004",1,[2, 5]));
 
-        $this->create(new Alumno(3,"Sara","Martínez Torres","sara.martinez@example.com","2005-01-30",2,[3, 5]));
+        $this->create(new Alumno(3,"Sara","Martínez Torres","sara.martinez@example.com","01/30/2005",2,[3, 5]));
 
-        $this->create(new Alumno(4,"Diego","Sánchez Romero","diego.sanchez@example.com","2004-07-08",3,[0, 4]));
+        $this->create(new Alumno(4,"Diego","Sánchez Romero","diego.sanchez@example.com","07/08/2004",3,[0, 4]));
     }
 
     static public function getAsignaturas(): ?array
@@ -65,6 +65,36 @@ class TablaAlumnos
         }
 
         return $asignaturasAlumno;
+    }
+
+    public function idNuevoAlumno(): int
+    {
+        $ultimoAlumno = end($this->talumnos);
+        return $ultimoAlumno->id + 1;
+    }
+
+    public function getIndiceById(int $id): ?int
+    {
+        foreach ($this->talumnos as $indice => $alumno) 
+        {
+            if ($alumno->id === $id) 
+            {
+                return $indice;
+            }
+        }
+        return null;
+    }
+
+    public function getAlumnoById(int $id): ?Alumno
+    {
+        foreach ($this->talumnos as $alumno) 
+        {
+            if ($alumno->id === $id) 
+            {
+                return $alumno;
+            }
+        }
+        return null;
     }
 }
 ?>

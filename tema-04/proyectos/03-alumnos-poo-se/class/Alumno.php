@@ -34,11 +34,9 @@ class Alumno
     public function getEdad(?string $f_nacimiento): ?int
     {
         $fechaActual = new DateTime('now');
-        $fechaActualFormat = DateTime::createFromFormat('m/d/y', (string) $fechaActual);
-        $fechaAlumno = DateTime::createFromFormat('m/d/y' ,$f_nacimiento);
-        $edad = $fechaAlumno->diff($fechaActualFormat);
+        $fechaAlumno = DateTime::createFromFormat('m/d/Y' ,$f_nacimiento);
 
-        return (int) $edad->format('%y');
+        return $fechaAlumno->diff($fechaActual)->y;
     }
 }
 ?>

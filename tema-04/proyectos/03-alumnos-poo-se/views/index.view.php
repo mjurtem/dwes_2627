@@ -53,7 +53,7 @@
                             <th scope="col">Apellidos</th>
                             <th scope="col">Email</th>
                             <th scope="col">Fecha nacimiento</th>
-                            <th scope="col" class="text-end">Curso</th>
+                            <th scope="col">Curso</th>
                             <th scope="col">Asignaturas</th>
                             <th scope="col" class="text-end">Edad</th>
                             <th scope="col">Acciones</th>
