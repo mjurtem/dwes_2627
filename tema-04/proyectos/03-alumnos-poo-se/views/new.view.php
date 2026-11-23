@@ -38,7 +38,7 @@
                     <!-- fecha nacimiento -->
                     <div class="mb-3">
                         <label for="f_nacimiento" class="form-label">Fecha de nacimiento:</label>
-                        <input type="text" class="form-control" id="f_nacimiento" name="f_nacimiento" required>
+                        <input type="date" class="form-control" id="f_nacimiento" name="f_nacimiento" required>
                     </div>
                     <!-- curso -->
                     <!-- Genera dinámicamente el select de cursos a partir del array $cursos -->

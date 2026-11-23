@@ -34,9 +34,21 @@ class Alumno
     public function getEdad(?string $f_nacimiento): ?int
     {
         $fechaActual = new DateTime('now');
-        $fechaAlumno = DateTime::createFromFormat('m/d/Y' ,$f_nacimiento);
 
-        return $fechaAlumno->diff($fechaActual)->y;
+        if (str_contains($f_nacimiento, '-'))
+        {
+            $fechaCorregida = str_replace('-', '/', $f_nacimiento);
+            $fechaAlumno = DateTime::createFromFormat('d/m/Y' ,$fechaCorregida);
+            return $fechaAlumno->diff($fechaActual)->y;
+        }
+        else
+        {
+            $fechaAlumno = DateTime::createFromFormat('d/m/Y' ,$f_nacimiento);
+
+            return $fechaAlumno->diff($fechaActual)->y;
+        }
+        
+       
     }
 }
 ?>

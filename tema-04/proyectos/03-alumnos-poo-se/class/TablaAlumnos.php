@@ -32,13 +32,13 @@ class TablaAlumnos
 
     public function addAlumnos(): void
     {
-        $this->create(new Alumno(1,"Lucía","García López","lucia.garcia@example.com","04/12/2005",0,[1, 2]));
+        $this->create(new Alumno(1,"Lucía","García López","lucia.garcia@example.com","12/04/2005",0,[1, 2]));
 
-        $this->create(new Alumno(2,"Marcos","Fernández Ruiz","marcos.fernandez@example.com","09/23/2004",1,[2, 5]));
+        $this->create(new Alumno(2,"Marcos","Fernández Ruiz","marcos.fernandez@example.com","23/09/2004",1,[2, 5]));
 
-        $this->create(new Alumno(3,"Sara","Martínez Torres","sara.martinez@example.com","01/30/2005",2,[3, 5]));
+        $this->create(new Alumno(3,"Sara","Martínez Torres","sara.martinez@example.com","30/01/2005",2,[3, 5]));
 
-        $this->create(new Alumno(4,"Diego","Sánchez Romero","diego.sanchez@example.com","07/08/2004",3,[0, 4]));
+        $this->create(new Alumno(4,"Diego","Sánchez Romero","diego.sanchez@example.com","08/07/2004",3,[0, 4]));
     }
 
     static public function getAsignaturas(): ?array
